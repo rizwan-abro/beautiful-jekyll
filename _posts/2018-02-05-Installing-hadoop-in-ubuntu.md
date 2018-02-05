@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Test markdown
+title: Installing Hadoop on Ubuntu 16.0.4
 gh-repo: rizwan-abro/Rizwan Abro
 gh-badge: [star, fork, follow]
 ---
@@ -275,7 +275,9 @@ They all are XML files with a top-level <configuration> node. For clarity we rep
 
 Next, we need to format the namenode filesystem with thefollowing command:
 
+```
 hadoopuser@rizwan ~ $ hdfs namenode -format
+```
 
 `Search the output: if you can read a string like this:`
 
@@ -294,9 +296,9 @@ hadoopuser@rizwan ~ $ start-yarn.sh
 
 To check the status of the services use the jps command:
 
+```
 hadoopuser@rizwan ~ $ jps
-
-
+```
 
 `You will see the following output`
 
@@ -325,4 +327,8 @@ You can see your hadoop system's health on localhost http://localhost:50070/dfsh
 
 
 
-## **Congratulations, you made it!**
+
+
+
+
+## Congratulations, you made it!**
