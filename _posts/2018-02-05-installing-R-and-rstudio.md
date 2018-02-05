@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installing R and Rstudio in Ubuntu 16.0.4
+title: Installing R and Rstudio on Ubuntu 16.0.4
 gh-repo: rizwan-abro
 gh-badge: [star, fork, follow]
 ---
