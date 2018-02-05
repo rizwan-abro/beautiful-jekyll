@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installing Hadoop on Ubuntu 16.0.4
+title: Test markdown
 gh-repo: rizwan-abro/Rizwan Abro
 gh-badge: [star, fork, follow]
 ---
@@ -180,86 +180,94 @@ Hadoop configuration is quite hard, because it has a lot of config files. We nee
 
 ·                   **yarn-site.xml**
 
+
+
 They all are XML files with a top-level <configuration> node. For clarity we report the configuration node only.
+
+
 
 **core-site.xml**
 
-**<configuration>**
+`<configuration>`
 
-**<property>**
+`<property>`
 
-  **<name>**fs.default.name**</name>**
+`<name>fs.default.name</name>`
 
-​    **<value>**hdfs://localhost:9000**</value>**
+`<value>hdfs://localhost:9000</value>`
 
-**</property>**
+`</property>`
 
-**</configuration>**
+`</configuration>`
+
+
 
 **hdfs-site.xml**
 
-**<configuration>**
+`<configuration>`
 
-**<property>**
+`<property>`
 
- **<name>**dfs.replication**</name>**
+ `<name>dfs.replication</name>`
 
- **<value>**1**</value>**
+ `<value>1</value>`
 
-**</property>**
+`</property>`
 
- 
+ `<property>`
 
-**<property>**
+`<name>dfs.name.dir</name>`
 
-  **<name>**dfs.name.dir**</name>**
+`<value>file:/usr/local/hadoop/hadoopdata/hdfs/namenode</value>`
 
-​    **<value>**file:/usr/local/hadoop/hadoopdata/hdfs/namenode**</value>**
+`</property>`
 
-**</property>**
+ `<property>`
 
- 
+  `<name>dfs.data.dir</name>`
 
-**<property>**
+​  `<value>file:/usr/local/hadoop/hadoopdata/hdfs/datanode</value>`
 
-  **<name>**dfs.data.dir**</name>**
+`</property>`
 
-​    **<value>**file:/usr/local/hadoop/hadoopdata/hdfs/datanode**</value>**
+`</configuration>`
 
-**</property>**
 
-**</configuration>**
 
 {: .box-note}
-**Note:** Mapred-site.xml doesn't exists so you need to create this file with xml header.
+**Note:**    Mapred-site.xml doesn't exists so you need to create this file with xml header.
+
+
 
 **mapred-site.xml**
 
-**<configuration>**
+`<configuration>`
 
- **<property>**
+`<property>`
 
-  **<name>**mapreduce.framework.name**</name>**
+`<name>mapreduce.framework.name</name>`
 
-   **<value>**yarn**</value>**
+`<value>yarn</value>`
 
- **</property>**
+`</property>`
 
-**</configuration>**
+`</configuration>`
+
+
 
 **yarn-site.xml**
 
-**<configuration>**
+`<configuration>`
 
- **<property>**
+`<property>`
 
-  **<name>**yarn.nodemanager.aux-services**</name>**
+`<name>yarn.nodemanager.aux-services</name>`
 
-​    **<value>**mapreduce_shuffle**</value>**
+`<value>mapreduce_shuffle</value>`
 
- **</property>**
+ `</property>`
 
-**</configuration>**
+`</configuration>`
 
 
 
@@ -279,13 +287,16 @@ Start and stop services
 
 Now, the last thing to do is starting Hadoop services:
 
+```
 hadoopuser@rizwan ~ $ start-dfs.sh
-
 hadoopuser@rizwan ~ $ start-yarn.sh
+```
 
 To check the status of the services use the jps command:
 
 hadoopuser@rizwan ~ $ jps
+
+
 
 `You will see the following output`
 
@@ -305,9 +316,12 @@ hadoopuser@rizwan ~ $ jps
 
 To stop services, these are the commands:
 
+```
 hadoopuser@rizwan ~ $ stop-dfs.sh
-
 hadoopuser@rizwan ~ $ stop-yarn.sh
+```
+
+You can see your hadoop system's health on localhost http://localhost:50070/dfshealth.html#tab-overview
 
 
 
