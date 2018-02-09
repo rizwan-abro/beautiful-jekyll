@@ -49,12 +49,12 @@ following code:
 Paste the code in R 
 
 ```R
-> Sys.setenv(HADOOP_CMD="/usr/local/hadoop/bin/hadoop")
+> Sys.setenv("HADOOP_CMD"="/usr/local/hadoop/bin/hadoop")
 ```
 
 #### Setting up HADOOP_STREAMING
 ```R
-> Sys.setenv("HADOOP_CMD"="usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.5.jar")
+> Sys.setenv("HADOOP_STREAMING"="usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.5.jar")
 
 ```
 
