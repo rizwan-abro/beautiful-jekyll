@@ -67,7 +67,9 @@ Paste the code in R
 
    Analytics: https://github.com/RevolutionAnalytics/Rhadoop/wiki/Downloads
 
-**° rmr: [rmr2_3.3.1.tar.gz]**
+
+
+### ° rmr: [rmr2_3.3.1.tar.gz]
 
 {: .box-note}
 **Note:** This package has dependency on below packages, so you must install them before installing the rmr2 package.
@@ -82,7 +84,9 @@ You can install the rmr2 by running the below command in the terminal
 $ R CMD INSTALL rmr2_3.3.1.tar.gz
 ```
 
-**° rhdfs: [rhdfs_1.0.8.tar.gz]**
+
+
+### ° rhdfs: [rhdfs_1.0.8.tar.gz]
 
 {: .box-note}
 **Note:** Prerequisites 
@@ -109,7 +113,7 @@ Open the terminal and run the command below
 $ R CMD INSTALL rJava_0.9-9.tar.gz
 ```
 
-**Step#2 HADOOP_CMD & HADOOP_STREAMING path must be set before installing rhdfs**
+##### Step#2 HADOOP_CMD & HADOOP_STREAMING path must be set before installing rhdfs
 
 ```R
 Sys.setenv("HADOOP_CMD"="/usr/local/hadoop/bin/hadoop")
@@ -117,7 +121,7 @@ Sys.setenv("HADOOP_STREAMING"="/usr/local/hadoop/contrib/streaming/
 hadoop-streaming-1.0.3.jar")
 ```
 
-**Step#3 Installing Thrift**
+##### Step#3 Installing Thrift
 
 Paste the command below in terminal
 
@@ -173,7 +177,9 @@ Now install rhdfs package by running the below command in the terminal
 $ R CMD INSTALL rhdfs_1.0.8.tar.gz
 ```
 
-**° rhbase: [rhbase_1.2.1.tar.gz]** 
+
+
+### ° rhbase: [rhbase_1.2.1.tar.gz]
 
 Run this command in the terminal
 
