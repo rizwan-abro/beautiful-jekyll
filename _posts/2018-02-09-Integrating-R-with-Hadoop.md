@@ -113,13 +113,20 @@ Open the terminal and run the command below
 $ R CMD INSTALL rJava_0.9-9.tar.gz
 ```
 
+
+
+
+
 ##### Step#2 HADOOP_CMD & HADOOP_STREAMING path must be set before installing rhdfs
 
 ```R
-Sys.setenv("HADOOP_CMD"="/usr/local/hadoop/bin/hadoop")
-Sys.setenv("HADOOP_STREAMING"="/usr/local/hadoop/contrib/streaming/
-hadoop-streaming-1.0.3.jar")
+> Sys.setenv("HADOOP_CMD"="/usr/local/hadoop/bin/hadoop")
+> Sys.setenv("HADOOP_STREAMING"="usr/local/hadoop/share/hadoop/tools/lib/hadoop-   streaming-2.7.5.jar")
 ```
+
+
+
+
 
 ##### Step#3 Installing Thrift
 
@@ -205,6 +212,8 @@ Run the commands below in the R:
 `Sys.setenv("HADOOP_CMD"="usr/local/hadoop/bin/hadoop")`
 
 `Sys.setenv("HADOOP_CMD"="usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.5.jar")`
+
+
 
 library(rhdfs')
 
