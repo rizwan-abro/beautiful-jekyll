@@ -52,11 +52,13 @@ Paste the code in R
 > Sys.setenv("HADOOP_CMD"="/usr/local/hadoop/bin/hadoop")
 ```
 
+
 #### Setting up HADOOP_STREAMING
 ```R
 > Sys.setenv("HADOOP_STREAMING"="usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.5.jar")
 
 ```
+
 
 
 
@@ -215,9 +217,9 @@ Run the commands below in the R:
 
 
 
-library(rhdfs')
+library(rhdfs)
 
-library('rmr2')
+library(rmr2)
 
 ##### initializing the RHadoop
 hdfs.init() 
